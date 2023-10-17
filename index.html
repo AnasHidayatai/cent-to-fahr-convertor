@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form onsubmit="doSum(event)">
+
+
+    <h1>Centigrade to Fahrenheit</h1>
+
+    Centigrade : <input id="centi" type="number" required step="0.1">
+    <br>
+    <button>Convert</button>
+
+    <p id="result"></p>
+
+    </form>
+
+
+    <script>
+    function doSum(event) {
+        event.preventDefault();
+        
+        let Centigrade = document.querySelector ("#centi").value;
+
+        console.log(Centigrade)
+         
+        let result =  + Number((Centigrade * 9/5) + 32 )
+        
+
+let messege = `The Fahrenhiet is ${result}`
+
+document.querySelector("#result") .innerHTML = messege 
+        
+    }
+
+
+    </script>
+    
+
+</body>
+</html>
